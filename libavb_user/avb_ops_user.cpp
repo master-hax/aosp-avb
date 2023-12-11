@@ -319,6 +319,7 @@ AvbOps* avb_ops_user_new(void) {
   if (ops->ab_ops == NULL) {
     avb_error("Error allocating memory for AvbABOps.\n");
     free(ops);
+    ops = NULL;
     goto out;
   }
   ops->ab_ops->ops = ops;
